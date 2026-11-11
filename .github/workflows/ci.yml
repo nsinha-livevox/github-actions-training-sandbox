@@ -1,0 +1,10 @@
+# Exercise 8: this repository has no pipeline of its own. It calls the shared one.
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    uses: nsinha-livevox/github-actions-workflows/.github/workflows/reusable-python-test.yml@v1
+    with:
+      python-versions: '["3.12"]'
